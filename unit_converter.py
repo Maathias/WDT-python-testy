@@ -26,6 +26,12 @@ class UnitConverter:
     def meters_to_miles(self, meters):
         return meters / 1609.34
 
+    def kilometers_to_meters(self, km):
+        return km * 1000
+
+    def meters_to_kilometers(self, meters):
+        return meters / 1000
+
     # Konwersje masy
     def kilograms_to_pounds(self, kg):
         return kg * 2.20462
@@ -73,6 +79,10 @@ class UnitConverter:
                 return self.miles_to_meters(value)
             elif from_unit == "metry" and to_unit == "mile":
                 return self.meters_to_miles(value)
+            elif from_unit == "kilometry" and to_unit == "metry":  # Dodany warunek
+                return self.kilometers_to_meters(value)
+            elif from_unit == "metry" and to_unit == "kilometry":  # Dodany warunek
+                return self.meters_to_kilometers(value)
 
         elif category == "masa":
             if from_unit == "kilogramy" and to_unit == "funty":
