@@ -109,7 +109,6 @@ class UnitConverter:
         return "Konwersja nie jest dostępna"
 
 
-# Główna funkcja do uruchomienia aplikacji
 def main():
     converter = UnitConverter()
 

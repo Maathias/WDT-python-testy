@@ -25,9 +25,7 @@ class TestUnitConverter(unittest.TestCase):
         self.assertAlmostEqual(self.converter.miles_to_meters(10), 16093.4, places=1)
 
     def test_meters_to_miles(self):
-        result = self.converter.meters_to_miles(10000)
-        print(result)  # Sprawdź wynik
-        self.assertAlmostEqual(result, 6.213727366498068, places=5)  # Upewnij się, że używasz prawidłowej wartości
+        self.assertAlmostEqual(self.converter.meters_to_miles(10000), 6.213727366498068, places=5)
 
     # Testy dla masy
     def test_kilograms_to_pounds(self):
